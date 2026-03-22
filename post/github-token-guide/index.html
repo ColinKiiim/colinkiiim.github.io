@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>第一次使用 先把 GitHub Token 准备好 | 日计-DIY 文档</title>
-    <meta
-      name="description"
-      content="面向日计-DIY 新用户的 GitHub Token 获取教程"
-    />
+    <title>第一次使用 先把 GitHub Token 准备好 | 日计-DIY</title>
+    <meta name="description" content="日计-DIY 新用户的 GitHub Token 获取教程" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
@@ -26,72 +23,64 @@
     <main class="page-main">
       <div class="content">
         <div class="tag-row">
-          <a href="/">#日计-DIY</a>
+          <span>#日计-DIY</span>
           <span>#GitHub</span>
           <span>#教程</span>
         </div>
 
         <div class="article-body">
-          <h1 id="第一次使用-先把-GitHub-Token-准备好">第一次使用 先把 GitHub Token 准备好</h1>
-          <p class="lead">
-            这篇文章只解决一个问题：第一次使用 `日计-DIY` 时，怎么把 GitHub Token 准备好
-          </p>
+          <h1 id="第一次使用-先把-github-token-准备好">第一次使用 先把 GitHub Token 准备好</h1>
+          <p class="lead">这篇文章只讲一件事：生成一条能在日计-DIY 登录里使用的 GitHub classic token</p>
 
-          <h2 id="开始前你需要知道什么">开始前你需要知道什么</h2>
-          <p>
-            当前这版 `日计-DIY` 通过 `GitHub Token` 同步账本，所以你第一次使用时，需要先到 GitHub 里生成一条 token，再把它贴回登录页
-          </p>
-          <p>
-            最稳的做法是使用 <code>Personal access token (classic)</code>，并勾选 <code>repo</code> 权限
-          </p>
+          <h2 id="先说结论">先说结论</h2>
+          <p>直接创建 <code>Personal access token (classic)</code></p>
+          <p>权限先只勾 <code>repo</code></p>
 
-          <h2 id="你需要准备什么">你需要准备什么</h2>
+          <h2 id="开始前">开始前</h2>
           <ul>
-            <li>一个 GitHub 账号</li>
-            <li>已经能正常登录 GitHub 网页</li>
-            <li>已经打开 `日计-DIY` 登录页</li>
+            <li>准备一个已经能正常登录的 GitHub 账号</li>
+            <li>同时打开日计-DIY 登录页，生成后可以直接粘贴回去</li>
+            <li>如果你以前生成过 fine-grained token，这次不要选它</li>
           </ul>
 
           <h2 id="操作步骤">操作步骤</h2>
 
           <h3 id="g-01-进入-token-页面"><span class="step-anchor">G-01</span> 进入 Token 页面</h3>
           <p>
-            直接打开：
-            <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">https://github.com/settings/tokens</a>
+            直接打开
+            <a href="https://github.com/settings/tokens" target="_blank" rel="noopener"
+              >https://github.com/settings/tokens</a
+            >
           </p>
-          <p>
-            如果你想从 GitHub 菜单进去，路径是：头像 → Settings → Developer settings → Personal access tokens → Tokens (classic)
-          </p>
+          <p>如果从 GitHub 菜单进入，路径是：头像 → Settings → Developer settings → Personal access tokens → Tokens (classic)</p>
 
           <h3 id="g-02-新建-classic-token"><span class="step-anchor">G-02</span> 新建 classic token</h3>
           <ol>
-            <li>点击 `Generate new token`</li>
-            <li>选择 `Generate new token (classic)`</li>
+            <li>点击 <code>Generate new token</code></li>
+            <li>选择 <code>Generate new token (classic)</code></li>
           </ol>
-          <p>如果 GitHub 要你重新输入密码或做二次验证，按提示完成就可以</p>
+          <p>如果 GitHub 要你重新输入密码或做二次验证，按提示完成</p>
 
           <h3 id="g-03-填写基本信息"><span class="step-anchor">G-03</span> 填写基本信息</h3>
-          <p><code>Note</code> 建议写成你后面一眼能认出来的名字，比如 <code>日计-DIY 网页登录</code></p>
-          <p><code>Expiration</code> 第一次先选 <code>30 days</code>、<code>90 days</code> 或 <code>1 year</code> 都可以</p>
+          <p><code>Note</code> 可以写成你后面一眼能认出来的名字，比如 <code>日计-DIY 网页登录</code></p>
+          <p><code>Expiration</code> 第一次选 <code>30 days</code>、<code>90 days</code> 或 <code>1 year</code> 都可以</p>
 
           <h3 id="g-04-勾选权限"><span class="step-anchor">G-04</span> 勾选权限</h3>
-          <p>当前这版最稳的做法，是只先勾一个权限：<code>repo</code></p>
-          <p>
-            因为网页登录之后，需要创建账本仓库、读取账本内容和写入同步内容，而这些动作都依赖 <code>repo</code>
-          </p>
+          <p>当前这版最稳的做法，是先只勾一个权限：<code>repo</code></p>
+          <p>登录之后创建账本、读取账本和写入同步内容，都要用到这个权限</p>
 
           <h3 id="g-05-生成并复制"><span class="step-anchor">G-05</span> 生成并复制</h3>
           <ol>
             <li>滚动到页面最下方</li>
-            <li>点击 `Generate token`</li>
-            <li>看到 token 后立刻复制并保存</li>
+            <li>点击 <code>Generate token</code></li>
+            <li>看到 token 后立刻复制并先保存好</li>
           </ol>
-          <p>GitHub 只会完整显示这一次，关掉页面后就不能再把原文找回来</p>
+          <p>GitHub 只会完整显示这一次</p>
 
           <h3 id="g-06-回到日计-diy-登录"><span class="step-anchor">G-06</span> 回到日计-DIY 登录</h3>
           <ol>
-            <li>回到 `日计-DIY` 登录页</li>
-            <li>点击 `使用 GitHub Token 开始`</li>
+            <li>回到日计-DIY 登录页</li>
+            <li>点击 <code>使用 GitHub Token 开始</code></li>
             <li>粘贴刚才复制的 token</li>
           </ol>
           <p>正常情况下，登录弹层会关闭，然后你就可以继续创建或同步账本</p>
@@ -99,32 +88,27 @@
           <h3 id="g-07-如果忘了复制"><span class="step-anchor">G-07</span> 如果忘了复制</h3>
           <p>直接回到 token 列表，把刚才那条删掉，再重新生成一条新的最快</p>
 
-          <h3 id="g-08-如果登录失败"><span class="step-anchor">G-08</span> 如果登录失败</h3>
+          <h2 id="登录失败时">登录失败时</h2>
           <ol>
-            <li>检查是不是贴错了 token</li>
-            <li>检查是不是生成成了 fine-grained token</li>
-            <li>检查是不是漏勾了 `repo`</li>
-            <li>检查 token 有没有过期</li>
-            <li>检查复制时有没有多带空格或换行</li>
+            <li>确认你生成的是 classic token，不是 fine-grained token</li>
+            <li>确认权限里勾了 <code>repo</code></li>
+            <li>确认复制时没有多带空格或换行</li>
+            <li>确认 token 还没过期</li>
+            <li>如果还是不确定，直接删除旧 token 再重新生成一条</li>
           </ol>
 
-          <h2 id="常见问题">常见问题</h2>
-          <p><strong>为什么不推荐一开始就用 fine-grained token</strong></p>
-          <p>因为当前这版 `日计-DIY` 是公开网页 + GitHub Token 的组合，classic token 在第一次跑通时更稳</p>
-
-          <p><strong>只勾 `repo` 真的够吗</strong></p>
-          <p>对当前网页登录场景，一般够用。如果后面真的遇到权限报错，再按具体报错补判断更稳</p>
-
-          <p><strong>如果我卡住了怎么办</strong></p>
-          <p>直接把步骤号发给我就行，比如 `我卡在 G-04`</p>
+          <div class="article-pager">
+            <a href="/post/">返回文章列表</a>
+            <a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">回到日计-DIY</a>
+          </div>
         </div>
       </div>
 
-      <div class="outline-wrapper">
+      <aside class="outline-wrapper">
         <div class="outline-card">
-          <h4>第一次使用 先把 GitHub Token 准备好</h4>
-          <a href="#开始前你需要知道什么">开始前你需要知道什么</a>
-          <a href="#你需要准备什么">你需要准备什么</a>
+          <h4>目录</h4>
+          <a href="#先说结论">先说结论</a>
+          <a href="#开始前">开始前</a>
           <a href="#操作步骤">操作步骤</a>
           <a data-level="2" href="#g-01-进入-token-页面">G-01 进入 Token 页面</a>
           <a data-level="2" href="#g-02-新建-classic-token">G-02 新建 classic token</a>
@@ -133,10 +117,9 @@
           <a data-level="2" href="#g-05-生成并复制">G-05 生成并复制</a>
           <a data-level="2" href="#g-06-回到日计-diy-登录">G-06 回到日计-DIY 登录</a>
           <a data-level="2" href="#g-07-如果忘了复制">G-07 如果忘了复制</a>
-          <a data-level="2" href="#g-08-如果登录失败">G-08 如果登录失败</a>
-          <a href="#常见问题">常见问题</a>
+          <a href="#登录失败时">登录失败时</a>
         </div>
-      </div>
+      </aside>
     </main>
 
     <div class="footer-nav">

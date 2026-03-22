@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>日计-DIY 文档</title>
-    <meta
-      name="description"
-      content="日计-DIY 的公开教程与帮助文章，计划发布到 GitHub Pages"
-    />
+    <title>日计-DIY 文章</title>
+    <meta name="description" content="日计-DIY 的公开教程与使用说明" />
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
@@ -17,64 +14,71 @@
         <div class="header-links">
           <a href="/post/">文章</a>
           <a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a>
-          <a href="https://github.com/glink25/Cent?tab=readme-ov-file" target="_blank" rel="noopener">Cent 开源仓库</a>
+          <a href="https://github.com/glink25/Cent" target="_blank" rel="noopener">Cent 开源仓库</a>
         </div>
       </div>
     </header>
 
-    <div class="shell">
-      <main class="article post-list">
-        <div class="tags">
+    <main class="page-main">
+      <div class="content">
+        <div class="tag-row">
           <span>#日计-DIY</span>
-          <span>#文档</span>
           <span>#文章</span>
+          <span>#帮助</span>
         </div>
-        <h1 class="article-title">日计-DIY 文档</h1>
-        <p class="lead">
-          这里单独放 `日计-DIY` 的公开教程。主站继续负责登录和使用，文章则改用 GitHub Pages 承载，这样路径更干净，也更适合长期积累
-        </p>
 
-        <article class="post-item">
-          <div class="tags">
-            <span>#日计-DIY</span>
-            <span>#GitHub</span>
-            <span>#教程</span>
+        <div class="article-body">
+          <h1 id="日计-diy-文章">日计-DIY 文章</h1>
+          <p class="lead">这里放日计-DIY 的公开使用说明</p>
+          <p>主站负责登录和记账，教程单独放在这里，方便直接打开，也方便后面继续补充</p>
+
+          <h2 id="新手开始">新手开始</h2>
+          <div class="post-feed">
+            <article class="post-card">
+              <div class="tag-row">
+                <span>#日计-DIY</span>
+                <span>#GitHub</span>
+                <span>#教程</span>
+              </div>
+              <h2><a href="/post/github-token-guide/">第一次使用 先把 GitHub Token 准备好</a></h2>
+              <p>一步一步生成 classic token，勾对权限，然后回到日计-DIY 登录</p>
+              <p class="meta-text">适合第一次打开日计-DIY 的用户</p>
+            </article>
           </div>
-          <h2><a href="/post/github-token-guide/">第一次使用 先把 GitHub Token 准备好</a></h2>
+
+          <h2 id="补充参考">补充参考</h2>
           <p>
-            面向第一次使用 `日计-DIY` 的用户，逐步说明怎么创建 classic token、需要勾哪些权限、登录失败时该怎么排
+            登录页里的 <code>查看介绍</code> 仍然指向官方的 PWA 文章：
+            <a
+              href="https://glink25.github.io/post/Cent-PWA%E5%B0%8F%E6%8A%80%E5%B7%A7/"
+              target="_blank"
+              rel="noopener"
+              >Cent PWA 小技巧</a
+            >
           </p>
-          <div class="meta">
-            发布路径：`/post/github-token-guide/`
-          </div>
-        </article>
-
-        <article class="post-item">
-          <div class="tags">
-            <span>#PWA</span>
-            <span>#参考</span>
-          </div>
-          <h2>安装说明仍保留官方文章链接</h2>
-          <p>
-            登录弹层里的 `查看介绍` 继续指向 Cent 官方那篇 PWA 技巧文，避免重复造轮子，也保留原始参考来源
-          </p>
-          <div class="meta">
-            <a href="https://glink25.github.io/post/Cent-PWA%E5%B0%8F%E6%8A%80%E5%B7%A7/" target="_blank" rel="noopener">打开官方文章</a>
-          </div>
-        </article>
-      </main>
-
-      <div class="footer-nav">
-        <ul>
-          <li><a href="/post/">文章</a></li>
-          <li><a href="https://github.com/glink25" target="_blank" rel="noopener">About</a></li>
-          <li><a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a></li>
-        </ul>
+        </div>
       </div>
 
-      <footer class="footer-bottom">
-        <small><a href="https://github.com/ColinKiiim" target="_blank" rel="noopener">© ColinKiiim</a></small>
-      </footer>
+      <aside class="outline-wrapper">
+        <div class="outline-card">
+          <h4>目录</h4>
+          <a href="#日计-diy-文章">日计-DIY 文章</a>
+          <a href="#新手开始">新手开始</a>
+          <a href="#补充参考">补充参考</a>
+        </div>
+      </aside>
+    </main>
+
+    <div class="footer-nav">
+      <ul>
+        <li><a href="/post/">文章</a></li>
+        <li><a href="https://github.com/glink25" target="_blank" rel="noopener">About</a></li>
+        <li><a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a></li>
+      </ul>
     </div>
+
+    <footer class="footer-bottom">
+      <small><a href="https://github.com/ColinKiiim" target="_blank" rel="noopener">© ColinKiiim</a></small>
+    </footer>
   </body>
 </html>
