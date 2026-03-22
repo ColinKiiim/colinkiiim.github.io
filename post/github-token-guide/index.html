@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>第一次使用 先把 GitHub Token 准备好 | 日计-DIY 文档</title>
+    <meta
+      name="description"
+      content="面向日计-DIY 新用户的 GitHub Token 获取教程"
+    />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="site-bar">
+        <div class="site-brand">
+          <span class="site-dot"></span>
+          <span>日计-DIY 文档</span>
+        </div>
+        <div class="site-links">
+          <a href="/post/">文章</a>
+          <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">打开 GitHub Token 页面</a>
+          <a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <main class="article">
+          <header class="article-header">
+            <div class="tags">
+              <span>#日计-DIY</span>
+              <span>#GitHub Token</span>
+              <span>#登录教程</span>
+            </div>
+            <h1 class="article-title">第一次使用<br />先把 GitHub Token 准备好</h1>
+            <p class="lead">
+              如果你是第一次打开 `日计-DIY`，这篇文章会带你从 GitHub 设置页一路走到网页登录成功
+            </p>
+          </header>
+
+          <div class="intro-card">
+            当前这版 `日计-DIY` 最稳的登录方式是
+            <strong>`Personal access token (classic)` + `repo` 权限</strong>
+            先按这篇文章走通，后面再考虑更细的权限模型会轻松很多
+            <div class="hero-actions">
+              <a class="pill-link" href="https://github.com/settings/tokens" target="_blank" rel="noopener">现在打开 GitHub Token 页面</a>
+              <a class="pill-link" href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">回到日计-DIY</a>
+            </div>
+          </div>
+
+          <section class="article-block" id="intro">
+            <h2>前言</h2>
+            <p>
+              `日计-DIY` 当前通过 `GitHub Token` 同步账本。也就是说，网页本身是公开入口，但账本数据还是放在你自己的 GitHub
+              仓库里
+            </p>
+            <p>
+              所以第一次使用时，你需要先在 GitHub 里创建一条能访问仓库的 token，再把它粘贴回登录页
+            </p>
+          </section>
+
+          <section class="article-block" id="need">
+            <h2>开始前你需要准备什么</h2>
+            <ul>
+              <li>一个 GitHub 账号</li>
+              <li>能正常登录 GitHub 网页</li>
+              <li>已经打开 `日计-DIY` 登录页</li>
+            </ul>
+          </section>
+
+          <section class="article-block" id="steps">
+            <h2>操作步骤</h2>
+
+            <div class="step" id="g01">
+              <div class="step-code">G-01</div>
+              <h3>进入 Token 页面</h3>
+              <p>你可以直接打开 GitHub 的 token 设置页，也可以按菜单路径慢慢点进去</p>
+              <div class="path-list">
+                <span class="path-chip">头像</span>
+                <span class="path-chip">Settings</span>
+                <span class="path-chip">Developer settings</span>
+                <span class="path-chip">Personal access tokens</span>
+                <span class="path-chip">Tokens (classic)</span>
+              </div>
+              <p>
+                直接链接：
+                <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">https://github.com/settings/tokens</a>
+              </p>
+            </div>
+
+            <div class="step" id="g02">
+              <div class="step-code">G-02</div>
+              <h3>新建 classic token</h3>
+              <ol>
+                <li>点击 `Generate new token`</li>
+                <li>选择 `Generate new token (classic)`</li>
+              </ol>
+              <p>如果 GitHub 要你重新输入密码或做二次验证，按提示完成就可以</p>
+            </div>
+
+            <div class="step" id="g03">
+              <div class="step-code">G-03</div>
+              <h3>填写基本信息</h3>
+              <p>`Note` 建议写成后面一眼能认出的名字，比如 `日计-DIY 网页登录`</p>
+              <p>`Expiration` 建议第一次先选 `30 days`、`90 days` 或 `1 year`</p>
+            </div>
+
+            <div class="step" id="g04">
+              <div class="step-code">G-04</div>
+              <h3>勾选权限</h3>
+              <p>当前这版最稳的做法是只先勾：</p>
+              <div class="path-list">
+                <span class="path-chip">repo</span>
+              </div>
+              <p>
+                因为网页登录后需要创建账本仓库、读取账本内容和写入同步内容，而这些都依赖 `repo`
+              </p>
+            </div>
+
+            <div class="step" id="g05">
+              <div class="step-code">G-05</div>
+              <h3>生成并马上复制</h3>
+              <ol>
+                <li>滚动到页面最下方</li>
+                <li>点击 `Generate token`</li>
+                <li>看到 token 后立刻复制并保存</li>
+              </ol>
+              <div class="callout">
+                <strong>这一刻最重要</strong><br />
+                GitHub 只会完整显示这一次，关掉页面后就不能再把原文找回来
+              </div>
+            </div>
+
+            <div class="step" id="g06">
+              <div class="step-code">G-06</div>
+              <h3>回到日计-DIY 登录</h3>
+              <ol>
+                <li>回到 `日计-DIY` 登录页</li>
+                <li>点击 `使用 GitHub Token 开始`</li>
+                <li>粘贴刚才复制的 token</li>
+              </ol>
+              <p>正常情况下，登录弹层会关闭，然后你就可以继续创建或同步账本</p>
+            </div>
+
+            <div class="step" id="g07">
+              <div class="step-code">G-07</div>
+              <h3>如果刚生成就忘了复制</h3>
+              <p>不用找回原文，直接回到 token 列表删掉旧 token，再重新生成一条新的最快</p>
+            </div>
+
+            <div class="step" id="g08">
+              <div class="step-code">G-08</div>
+              <h3>如果网页登录失败</h3>
+              <ol>
+                <li>检查是不是贴错了 token</li>
+                <li>检查是不是生成成了 fine-grained token</li>
+                <li>检查是不是漏勾了 `repo`</li>
+                <li>检查 token 有没有过期</li>
+                <li>检查复制时有没有多带空格或换行</li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="article-block" id="faq">
+            <h2>常见问题</h2>
+            <h3>为什么不推荐一开始就用 fine-grained token</h3>
+            <p>因为当前这版 `日计-DIY` 是公开网页 + GitHub Token 的组合，classic token 在首次跑通时更稳，排障成本也更低</p>
+
+            <h3>只勾 `repo` 真的够吗</h3>
+            <p>对当前网页登录场景，一般够用。如果后面真的遇到权限报错，再按具体报错补判断更稳</p>
+
+            <h3>如果我卡住了怎么办</h3>
+            <div class="callout">
+              直接把这几个信息发出来就行：<br />
+              文档：`GitHub Token 教程`<br />
+              步骤号：例如 `G-04`<br />
+              现象：例如 “登录后提示权限不足”
+            </div>
+          </section>
+        </main>
+
+        <aside class="toc aside-card">
+          <h4>目录</h4>
+          <a href="#intro">前言</a>
+          <a href="#need">开始前你需要准备什么</a>
+          <a href="#steps">操作步骤</a>
+          <a href="#g04">G-04 勾选权限</a>
+          <a href="#g06">G-06 回到日计-DIY 登录</a>
+          <a href="#faq">常见问题</a>
+        </aside>
+      </div>
+
+      <div class="footer">
+        这篇文章计划发布到 GitHub Pages 路径 `https://colinkiiim.github.io/post/github-token-guide/`
+      </div>
+    </div>
+  </body>
+</html>
