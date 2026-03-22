@@ -11,19 +11,18 @@
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
   <body>
-    <div class="shell">
-      <div class="site-bar">
-        <div class="site-brand">
-          <span class="menu-mark">☰</span>
-          <span>日计-DIY 文档</span>
-        </div>
-        <div class="site-links">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="text-button" aria-label="homepage">☰</a>
+        <div class="header-links">
           <a href="/post/">文章</a>
           <a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a>
           <a href="https://github.com/glink25/Cent?tab=readme-ov-file" target="_blank" rel="noopener">Cent 开源仓库</a>
         </div>
       </div>
+    </header>
 
+    <div class="shell">
       <main class="article post-list">
         <div class="tags">
           <span>#日计-DIY</span>
@@ -65,9 +64,17 @@
         </article>
       </main>
 
-      <div class="footer">
-        这个站点发布在 `colinkiiim.github.io`
+      <div class="footer-nav">
+        <ul>
+          <li><a href="/post/">文章</a></li>
+          <li><a href="https://github.com/glink25" target="_blank" rel="noopener">About</a></li>
+          <li><a href="https://cent.colinkim.us.ci/" target="_blank" rel="noopener">返回主站</a></li>
+        </ul>
       </div>
+
+      <footer class="footer-bottom">
+        <small><a href="https://github.com/ColinKiiim" target="_blank" rel="noopener">© ColinKiiim</a></small>
+      </footer>
     </div>
   </body>
 </html>
